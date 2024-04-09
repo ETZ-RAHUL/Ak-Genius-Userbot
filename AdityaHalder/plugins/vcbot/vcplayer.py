@@ -1,4 +1,4 @@
-# Powered By // @AdityaHalder //
+# Powered By // @Alllllllllllllllllllllll //
 
 __NAME__ = "VcPlayer"
 __MENU__ = """
