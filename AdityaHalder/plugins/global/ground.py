@@ -1,4 +1,4 @@
-# Powered By // @AdityaHalder //
+# Powered By // @Alllllllllllllllllllllll //
 
 __NAME__ = "Global"
 __MENU__ = """
