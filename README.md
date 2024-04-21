@@ -8,7 +8,7 @@ Genius-Userbot is an advanced & powerful multi-featured Telegram userbot.
 </p>
 
 <p align="center">
-<a href="https://heroku.com/deploy?template=https://github.com/Akash8t2/Genius-Userbot">
+<a href="https://heroku.com/deploy?template=https://github.com/ETZ-RAHUL/Ak-Genius-Userbot">
 <img src="AdityaHalder/resource/images/Heroku.svg" alt="Deploy to Heroku"></a>
 </p>
 
