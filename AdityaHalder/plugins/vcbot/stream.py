@@ -12,7 +12,7 @@ from ...modules.utilities.streams import *
 # Audio Player
 
 @app.on_message(cdz(["ply", "play"]) & ~filters.private)
-
+@sudo_users_only
 async def audio_stream(client, message):
     chat_id = message.chat.id
     aux = await eor(message, "**Processing ...**")
@@ -69,7 +69,7 @@ async def audio_stream(client, message):
 # Video Player
 
 @app.on_message(cdz(["vply", "vplay"]) & ~filters.private)
-
+@sudo_users_only
 async def video_stream(client, message):
     chat_id = message.chat.id
     aux = await eor(message, "**Processing ...**")
