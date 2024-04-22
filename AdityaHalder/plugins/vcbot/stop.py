@@ -7,8 +7,7 @@ from ...modules.mongo.streams import *
 from ...modules.utilities import queues
 
 
-@app.on_message(cdx(["stp"]) & ~filters.private)
-@sudo_users_only
+@app.on_message(cdx(["stp"]) & ~filters.private)
 async def stop_stream(client, message):
     chat_id = message.chat.id
     try:
@@ -30,8 +29,7 @@ async def stop_stream(client, message):
         print(f"Error: {e}")
         
         
-@app.on_message(cdz(["cstp"]))
-@sudo_users_only
+@app.on_message(cdz(["cstp"]))
 async def stop_stream_chat(client, message):
     user_id = message.from_user.id
     chat_id = await get_chat_id(user_id)
@@ -59,8 +57,7 @@ async def stop_stream_chat(client, message):
         
 
 
-@app.on_message(cdz(["end"]) & ~filters.private)
-@sudo_users_only
+@app.on_message(cdz(["end"]) & ~filters.private)
 async def close_stream_(client, message):
     chat_id = message.chat.id
     try:
@@ -82,8 +79,7 @@ async def close_stream_(client, message):
         
 
 
-@app.on_message(cdz(["cend"]))
-@sudo_users_only
+@app.on_message(cdz(["cend"]))
 async def close_stream_chat(client, message):
     user_id = message.from_user.id
     chat_id = await get_chat_id(user_id)
