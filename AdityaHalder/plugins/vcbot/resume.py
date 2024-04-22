@@ -4,8 +4,7 @@ from pyrogram import filters
 from pytgcalls.exceptions import GroupCallNotFound
 
 
-@app.on_message(cdx(["rsm", "resume"]) & ~filters.private)
-@sudo_users_only
+@app.on_message(cdx(["rsm", "resume"]) & ~filters.private)
 async def resume_stream(client, message):
     chat_id = message.chat.id
     try:
