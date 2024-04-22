@@ -7,12 +7,9 @@ from ...modules.mongo.streams import *
 from ...modules.utilities import queues
 from ...modules.utilities.streams import *
 
-
-
 # Audio Player
 
 @app.on_message(cdz(["ply", "play"]) & ~filters.private)
-@sudo_users_only
 async def audio_stream(client, message):
     chat_id = message.chat.id
     aux = await eor(message, "**Processing ...**")
@@ -69,7 +66,6 @@ async def audio_stream(client, message):
 # Video Player
 
 @app.on_message(cdz(["vply", "vplay"]) & ~filters.private)
-@sudo_users_only
 async def video_stream(client, message):
     chat_id = message.chat.id
     aux = await eor(message, "**Processing ...**")
@@ -130,7 +126,6 @@ async def video_stream(client, message):
 # Audio Player (Play From Anywhere)
 
 @app.on_message(cdz(["cply", "cplay"]))
-@sudo_users_only
 async def audio_stream_(client, message):
     user_id = message.from_user.id
     chat_id = await get_chat_id(user_id)
@@ -192,7 +187,6 @@ async def audio_stream_(client, message):
 # Video Player
 
 @app.on_message(cdz(["cvply", "cvplay"]))
-@sudo_users_only
 async def video_stream_(client, message):
     user_id = message.from_user.id
     chat_id = await get_chat_id(user_id)
