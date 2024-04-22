@@ -22,8 +22,7 @@ async def resume_stream(client, message):
         print(f"Error: {e}")
 
 
-@app.on_message(cdz(["crsm", "cresume"]))
-@sudo_users_only
+@app.on_message(cdz(["crsm", "cresume"]))
 async def resume_stream_chat(client, message):
     user_id = message.from_user.id
     chat_id = await get_chat_id(user_id)
