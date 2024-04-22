@@ -9,8 +9,7 @@ from ...modules.utilities import queues
 from ...modules.utilities.streams import *
 
 
-@app.on_message(cdx(["skp", "skip"]) & ~filters.private)
-@sudo_users_only
+@app.on_message(cdx(["skp", "skip"]) & ~filters.private)
 async def skip_stream(client, message):
     chat_id = message.chat.id
     try:
@@ -37,8 +36,7 @@ async def skip_stream(client, message):
 
 
 
-@app.on_message(cdz(["cskp", "cskip"]) & ~filters.private)
-@sudo_users_only
+@app.on_message(cdz(["cskp", "cskip"]) & ~filters.private)
 async def skip_stream_(client, message):
     user_id = message.from_user.id
     chat_id = await get_chat_id(user_id)
